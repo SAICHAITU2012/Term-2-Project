@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Soundboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-music"></i> Simple Soundboard</h1>
+            <p class="subtitle">Click any button to play a sound!</p>
+        </header>
+
+        <div class="soundboard">
+            <div class="button-grid">
+                <button class="sound-btn dog-btn" data-sound="dog">
+                    <i class="fas fa-dog"></i>
+                    <span>Dog Bark</span>
+                </button>
+                
+                <button class="sound-btn clap-btn" data-sound="clap">
+                    <i class="fas fa-hands-clapping"></i>
+                    <span>Clap Sound</span>
+                </button>
+                
+                <button class="sound-btn pop-btn" data-sound="pop">
+                    <i class="fas fa-burst"></i>
+                    <span>Pop Sound</span>
+                </button>
+                
+                <button class="sound-btn laugh-btn" data-sound="laugh">
+                    <i class="fas fa-face-laugh-beam"></i>
+                    <span>Laugh Track</span>
+                </button>
+                
+                <button class="sound-btn bell-btn" data-sound="bell">
+                    <i class="fas fa-bell"></i>
+                    <span>Bell Ring</span>
+                </button>
+                
+                <button class="sound-btn drum-btn" data-sound="drum">
+                    <i class="fas fa-drum"></i>
+                    <span>Drum Beat</span>
+                </button>
+            </div>
+            
+            <div class="controls">
+                <div class="volume-control">
+                    <i class="fas fa-volume-low"></i>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.7">
+                    <i class="fas fa-volume-high"></i>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="mute-btn" class="mute-btn">
+                        <i class="fas fa-volume-xmark"></i>
+                        Mute All
+                    </button>
+                    
+                    <button id="stop-btn" class="stop-btn">
+                        <i class="fas fa-stop"></i>
+                        Stop All
+                    </button>
+                </div>
+                
+                <div class="current-sound">
+                    <p id="current-sound-text">No sound playing</p>
+                    <p id="sound-status">Ready to play sounds</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <p><i class="fas fa-keyboard"></i> Keyboard Shortcuts: Press 1-6 for sounds, M for mute, S for stop</p>
+        </div>
+        
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> for learning Web APIs</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
